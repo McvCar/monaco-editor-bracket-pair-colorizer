@@ -25,7 +25,7 @@ module.exports = {
 		if(this.bracketColorObj){
 			return
 		}
-		let bracketPair = Editor.require('packages://simple-code/panel/editor-ex/editor-bracket-pair-colorizer/bracket-pair-colorizer/src/index.js');
+		let bracketPair = require('./bracket-pair-colorizer/src/index.js');
 		let args  = {colours:COLOR,debounce:200}
 		this.bracketColorObj = bracketPair.bracketColorDecorate(this.vs_editor,monaco,args);
 		
